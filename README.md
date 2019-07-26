@@ -8,3 +8,7 @@
 同时原生端，在navigationController.view 上添加一个 layer.speed = 0  的UIImageView 时，会导致H5无法调用相册。
 
 navigationController.view的子view里有speed = 0 与 UIIimageView 的搭配就会出现问题。
+
+
+解决办法，给该uiimageView的layer设置代理。
+imageView.layer.delegate = self;
